@@ -10,9 +10,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!-- endFonts -->
+
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
@@ -21,63 +30,47 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">Etsworth</h3>
+        <header class="navbar-fixed-top">
+            <div class="container">
+                <h1>ETSWORTH |</h1>
+                <h3>a fun way to browse art on Etsy</h3>
             </div>
+        </header>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-            </div>
-
-            <div class="row text-left">
-                <div class="col-md-offset-4">
-                    <h2>Now Try,</h2>
-                    <h4><b>yo backbone:router</b> &lt;router&gt;</h4>
-                    <h4><b>yo backbone:collection</b> &lt;collection&gt;</h4>
-                    <h4><b>yo backbone:model </b> &lt;model&gt;</h4>
-                    <h4><b>yo backbone:view </b> &lt;view&gt;</h4>
+        <div id="content">
+            <div class="container">
+                <div id="question">
+                    <h2 class="text-center">Which is more expensive?</h2>
                 </div>
-            </div>
 
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+                <div class="item-container c-left">
+                    <img class="item-image" src= "http://webneel.com/daily/sites/default/files/images/daily/03-2013/5-colorful-painting-by-luiza-vizoli.jpg" >
 
                 </div>
-                <div class="col-lg-6">
-                    <h4>Backbone.js</h4>
-                    <p>Backbone.js gives structure to web applications by providing models, collections, views and connects it all to your existing API over a RESTful JSON interface.</p>
 
-                    <h4>Underscore.js</h4>
-                    <p>Underscore.js is a utility-belt library for JavaScript that provides a lot of the functional programming support</p>
-
+                <div class="item-container c-right">
+                    <img class="item-image" src= "http://2.bp.blogspot.com/_df9jADO5y58/SwuAfZeL1kI/AAAAAAAACbA/MiKHJPA5i4Y/s1600/Trefny09+tide+painting.jpg" >
 
                 </div>
             </div>
-
-            <div class="footer">
-
-            </div>
-
         </div>
 
+        <footer>
+            <div class="container">
+                div
+                    <p>Etsworth was made by <a href="https://twitter.com/jjwielgus" target="_blank">this guy</a>.   </p>
+                    <p>Questions? <a href="mailto:etsworth@gmail.com?Subject=An%20inquiry,%20my%20good%20sir." target="_top">Email</a> me, if you're into that.</p>
+                    <p>&copy; 2014 All the rights. Reserved.</p>
+            </div>
+        </footer>
+
+
+        <script type="text/template" id="item-template">
+            <div class="item-container">
+                <img class="item-image" src= <%= image %> >
+                <p> <%= price %> </p>
+            </div>
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

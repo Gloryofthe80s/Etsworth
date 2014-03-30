@@ -2,12 +2,103 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+// ------ VARIABLES & MIXINS ------
+
+$black : #363636;
+$gray : #919191;
+$light-gray : #E6E6E6;
+$lime : #B1D45E;
+$aqua : #68E3D7;
+
+body {
+    background-color: $light-gray;
+    font-family: 'Playfair Display', serif;
 }
+
+a {
+    color: $lime;
+
+    &:hover {
+        color: $aqua;
+        text-decoration: none;
+    }
+}
+
+header {
+    width: 100%;
+    background-color: $black;
+    margin-top: 0;
+
+    h1, h3 {
+        font-family: 'Cinzel', serif;
+        margin: .7em 0 .25em 0;
+        color: $light-gray;
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h3 {
+        font-family: 'Playfair Display', serif;
+        color: $lime;
+    }
+}
+
+
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: $black;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: $light-gray;
+    }
+}
+
+.spacer {
+    height: 800px;
+}
+
+#content {
+    margin: 120px 0;
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+
+    .item-container {
+        display: inline-block;
+        background-color: $black;
+        border: 4px solid $black;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .item-name {
+        font-size: 16px;
+    }
+
+    .item-image {
+        width: 330px;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .c-left {
+        margin-right: 20px;
+    }
+}
+
+
 
 
 
