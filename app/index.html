@@ -37,39 +37,32 @@
             </div>
         </header>
 
-        <div id="content">
+        <div id="main">
             <div class="container">
                 <div id="question">
                     <h2 class="text-center">Which is more expensive?</h2>
                 </div>
 
-                <div class="item-container c-left">
-                    <img class="item-image" src= "http://webneel.com/daily/sites/default/files/images/daily/03-2013/5-colorful-painting-by-luiza-vizoli.jpg" >
-
-                </div>
-
-                <div class="item-container c-right">
-                    <img class="item-image" src= "http://2.bp.blogspot.com/_df9jADO5y58/SwuAfZeL1kI/AAAAAAAACbA/MiKHJPA5i4Y/s1600/Trefny09+tide+painting.jpg" >
-
+                <div class="etsyItems">
                 </div>
             </div>
+
         </div>
 
         <footer>
             <div class="container">
-                div
+                <div class="footer-contents">
                     <p>Etsworth was made by <a href="https://twitter.com/jjwielgus" target="_blank">this guy</a>.   </p>
                     <p>Questions? <a href="mailto:etsworth@gmail.com?Subject=An%20inquiry,%20my%20good%20sir." target="_top">Email</a> me, if you're into that.</p>
                     <p>&copy; 2014 All the rights. Reserved.</p>
+                </div>
             </div>
         </footer>
 
 
         <script type="text/template" id="item-template">
-            <div class="item-container">
-                <img class="item-image" src= <%= image %> >
+                <img class="item-image" src= <%= url_570xN %> >
                 <p> <%= price %> </p>
-            </div>
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -104,8 +97,10 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/main.js -->
+        <script src="scripts/models/EtsyItem.js"></script>
+        <script src="scripts/views/leftItemView.js"></script>
+        <script src="scripts/views/rightItemView.js"></script>
         <script src="scripts/main.js"></script>
-        <script src="scripts/templates.js"></script>
         <!-- endbuild -->
 </body>
 </html>

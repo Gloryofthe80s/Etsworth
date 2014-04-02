@@ -46,7 +46,6 @@ header {
     }
 }
 
-
 footer {
     width: 100%;
     height: 120px;
@@ -56,14 +55,28 @@ footer {
         font-family: 'Open Sans', sans-serif;
         color: $light-gray;
     }
+
+    .footer-contents {
+        margin-top: 20px;
+    }
 }
 
-.spacer {
-    height: 800px;
-}
+#main {
+    margin: 100px 0;
 
-#content {
-    margin: 120px 0;
+    .container {
+        min-height: 520px;
+        text-align: center;
+    }
+
+    //ghost element to vertically center
+    .container:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
 
     h2 {
         font-family: 'Playfair Display', serif;
@@ -75,6 +88,8 @@ footer {
         display: inline-block;
         background-color: $black;
         border: 4px solid $black;
+        color: white;
+        vertical-align: middle;
 
         &:hover {
             opacity: .9;
