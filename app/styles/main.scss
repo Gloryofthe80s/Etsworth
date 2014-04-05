@@ -60,13 +60,14 @@ header {
 
 footer {
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     background-color: $black;
 
     p {
         font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
         color: $light-gray;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
     }
 
     .footer-contents {
