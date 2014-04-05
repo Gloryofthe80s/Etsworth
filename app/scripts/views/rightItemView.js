@@ -23,7 +23,7 @@ var RightItemView = Backbone.View.extend({
         dispatcher.trigger('tellAllStopClickEvents');
 
         //then actually check if user guessed correctly
-        if(currentPriceRight > currentPriceRight) {
+        if(currentPriceRight > currentPriceLeft) {
             playerScore.attributes.correct ++;
             playerScore.trigger('change');
             dispatcher.trigger('flashAnswerCorrect');
