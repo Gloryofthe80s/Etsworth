@@ -15,7 +15,6 @@
         <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
         <!-- endFonts -->
 
         <!-- build:css(.tmp) styles/main.css -->
@@ -38,16 +37,21 @@
             </div>
         </header>
 
+        <a id="scrollToTop"></a>
         <div id="main">
             <div class="container">
+
                 <div id="question">
                     <h2 class="text-center">Which is more expensive?</h2>
                 </div>
 
                 <div id="current-score"></div>
 
-                <div class="etsyItems">
+                <div class="etsyItems"></div>
+
+                <div id="show-next-pair">
                 </div>
+
             </div>
 
         </div>
@@ -55,9 +59,11 @@
         <footer>
             <div class="container">
                 <div class="footer-contents">
+                    <a id="scrollToBottom"></a>
                     <p>Etsworth was made by <a href="https://twitter.com/jjwielgus" target="_blank">this guy</a>.   </p>
                     <p>Questions? <a href="mailto:etsworth@gmail.com?Subject=An%20inquiry,%20my%20good%20sir." target="_top">Email</a> me, if you're into that.</p>
                     <p>&copy; 2014 All the rights. Reserved.</p>
+                    <p class="about">The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
                 </div>
             </div>
         </footer>
@@ -65,6 +71,10 @@
 
         <script type="text/template" id="item-template">
                 <img class="item-image" src= <%= url_570xN %> >
+        </script>
+
+        <script type="text/template" id="player-score-template">
+            <p class="player-score"> Current score: <span><%= correct %> / <%= total() %></span> </p>
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -103,6 +113,8 @@
         <script src="scripts/models/PlayerScore.js"></script>
         <script src="scripts/views/LeftItemView.js"></script>
         <script src="scripts/views/RightItemView.js"></script>
+        <script src="scripts/views/PlayerScoreView.js"></script>
+        <script src="scripts/views/ShowNextPairButtonView.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

@@ -1,22 +1,33 @@
 $(document).ready(function () {
 
-    window.dispatcher = _.clone(Backbone.Events);
-
     window.playerScore = new PlayerScore();
+    window.playerScoreView = new PlayerScoreView({model: playerScore});
+
+    //set up dispatcher and set triggers
+    window.dispatcher = _.clone(Backbone.Events);
 
     dispatcher.on('itemViewClicked', function() {
         this.trigger('revealYourPrice');
     })
 
     dispatcher.on('tellAllStopClickEvents', function() {
-        console.log('dispatcher says "stop click events!"');
         this.trigger('stopClickEvents', ['click']);
     })
 
-    dispatcher.on('revealYourURL', function() {
-        console.log('dispatcher says "reveal your URL!"');
-        this.trigger('revealURL');
-    })
+    dispatcher.on('flashAnswerCorrect', function() {
+        console.log('correct!');
+    });
+    dispatcher.on('flashAnswerIncorrect', function() {
+        console.log('incorrect!');
+    });
+
+    function flashCorrect() {
+
+    }
+
+    function flashIncorrect() {
+
+    }
 
     window.dummyData = [
        [ { title: 'Baseball painting Between Innings 12x12 inch canvas original still life sports oil painting art by Judith Rhue',
@@ -1036,7 +1047,7 @@ $(document).ready(function () {
         });
     });
 
-    function renderNewPair() {
+    function renderFirstPair() {
         $('#main').find('.etsyItems').html('');
 
         new LeftItemView({model: newData[currentIndex][0]});
@@ -1045,8 +1056,26 @@ $(document).ready(function () {
         currentIndex++;
     }
 
-    renderNewPair();
-    // setInterval(renderNewPair, 6000);
+    //smooth scroll to anchors
+    window.setSmoothScroll = function() {
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    }
+
+    renderFirstPair();
+    setSmoothScroll();
 
 });
 

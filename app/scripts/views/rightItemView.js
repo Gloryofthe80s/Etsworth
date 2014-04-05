@@ -1,6 +1,7 @@
 var RightItemView = Backbone.View.extend({
-    tagName: 'div',
+    tagName: 'a',
     className: 'item-container c-right',
+    attributes: {href : '#scrollToBottom'},
 
     createTemplate: _.template($('#item-template').text()),
 
@@ -22,18 +23,20 @@ var RightItemView = Backbone.View.extend({
         dispatcher.trigger('tellAllStopClickEvents');
 
         //then actually check if user guessed correctly
-        if(currentPriceRight > currentPriceLeft) {
-            console.log('You got it right!');
+        if(currentPriceRight > currentPriceRight) {
             playerScore.attributes.correct ++;
-            console.log("You have guessed "+ playerScore.attributes.correct + "out of " + playerScore.attributes.total() + " correct!")
+            playerScore.trigger('change');
+            dispatcher.trigger('flashAnswerCorrect');
         } else {
-            console.log("You're wrong!")
             playerScore.attributes.incorrect ++;
-            console.log("You have guessed "+ playerScore.attributes.correct + " out of " + playerScore.attributes.total() + " correct!")
+            playerScore.trigger('change');
+            dispatcher.trigger('flashAnswerIncorrect');
         }
 
-        //notify dispatcher to call flashAnswer()
-        dispatcher.trigger('flashAnswer');
+        new ShowNextPairButtonView();
+
+        //reset smooth scroll for next pair
+        setSmoothScroll();
     },
 
     events: {

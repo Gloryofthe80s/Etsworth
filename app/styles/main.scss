@@ -59,7 +59,7 @@ header {
 
 footer {
     width: 100%;
-    height: 120px;
+    height: 150px;
     background-color: $black;
 
     p {
@@ -69,6 +69,19 @@ footer {
 
     .footer-contents {
         margin-top: 20px;
+    }
+
+    .about {
+        font-size: 10px;
+    }
+}
+
+.player-score {
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    span {
+        font-family: 'Open Sans', sans-serif;
     }
 }
 
@@ -91,7 +104,7 @@ footer {
     h2 {
         font-family: 'Playfair Display', serif;
         font-size: 3em;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
 
     .item-container {
@@ -137,6 +150,34 @@ footer {
 
     .c-left {
         margin-right: 20px;
+    }
+}
+
+#show-next-pair {
+    min-height: 120px;
+}
+
+.show-next-pair-btn-container {
+    background-color: $lime;
+    border: 6px solid $black;
+    color: $black;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 6px;
+    margin-top: 16px;
+
+    span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 26px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        background-color: $black;
+        border: 6px solid $lime;
+        color: $lime;
     }
 }
 
