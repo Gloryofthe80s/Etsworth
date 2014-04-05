@@ -1,0 +1,25 @@
+var CurrentScoreView = Backbone.View.extend({
+    tagName: 'div',
+    className: 'current-score-container',
+
+    createTemplate: _.template($('#item-template').text()),
+
+    events: {
+    },
+
+    initialize: function() {
+        $('#current-score').append(this.el);
+
+        this.render()
+
+        //re-render if the model changes
+        this.model.on('change', this.render, this);
+    },
+
+    render: function() {
+        var renderedTemplate = this.createTemplate(this.model.attributes);
+
+        var rendered = this.$el.html(renderedTemplate);
+        rendered.hide().fadeIn('slow');
+    }
+});

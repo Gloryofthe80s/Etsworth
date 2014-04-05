@@ -10,6 +10,17 @@ $light-gray : #E6E6E6;
 $lime : #B1D45E;
 $aqua : #68E3D7;
 
+@mixin sexy-emboss($opacity:0.8, $opacity2:0.05) {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, $opacity),
+                inset 0 1px 0 rgba(0, 0, 0, $opacity2);
+}
+
+@mixin sexy-font-shadow($opacity:0.15){
+    text-shadow: 0 1px 0 rgba(0, 0, 0, $opacity);
+}
+
+// ------ ------
+
 body {
     background-color: $light-gray;
     font-family: 'Playfair Display', serif;
@@ -75,7 +86,6 @@ footer {
       display: inline-block;
       height: 100%;
       vertical-align: middle;
-      margin-right: -0.25em; /* Adjusts for spacing */
     }
 
     h2 {
@@ -90,10 +100,6 @@ footer {
         border: 4px solid $black;
         color: white;
         vertical-align: middle;
-
-        &:hover {
-            opacity: .9;
-        }
     }
 
     .item-name {
@@ -104,7 +110,28 @@ footer {
         width: 330px;
 
         &:hover {
+            opacity: .55;
+        }
+
+        &:hover {
             opacity: .9;
+        }
+    }
+
+    .item-price {
+        font-family: 'Cinzel', serif;
+        font-size: 20px;
+        color: $lime;
+        margin-top: 12px;
+    }
+
+    .item-url {
+        font-family: 'Open Sans', sans-serif;
+        color: $light-gray;
+        font-size: 16px;
+
+        &:hover {
+            color: $aqua;
         }
     }
 
@@ -112,9 +139,6 @@ footer {
         margin-right: 20px;
     }
 }
-
-
-
 
 
 //------ MEDIA QUERIES ------

@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+    window.dispatcher = _.clone(Backbone.Events);
+
+    window.playerScore = new PlayerScore();
+
+    dispatcher.on('itemViewClicked', function() {
+        this.trigger('revealYourPrice');
+    })
+
+    dispatcher.on('tellAllStopClickEvents', function() {
+        console.log('dispatcher says "stop click events!"');
+        this.trigger('stopClickEvents', ['click']);
+    })
+
+    dispatcher.on('revealYourURL', function() {
+        console.log('dispatcher says "reveal your URL!"');
+        this.trigger('revealURL');
+    })
+
     window.dummyData = [
        [ { title: 'Baseball painting Between Innings 12x12 inch canvas original still life sports oil painting art by Judith Rhue',
            price: '250.00',
@@ -1003,11 +1021,9 @@ $(document).ready(function () {
            url_570xN: 'https://img1.etsystatic.com/011/0/7772684/il_570xN.421868245_qbjy.jpg' } ]
            ];
 
-    window.counter = {
-        correct : 0,
-        incorrect : 0,
-        total : this.correct + this.incorrect
-    };
+    window.currentIndex = 0;
+    window.currentPriceLeft = 0;
+    window.currentPriceRight = 0;
 
     window.newData = _.map(dummyData, function(currentDummyData) {
         return _.map(currentDummyData, function(el, i) {
@@ -1020,19 +1036,17 @@ $(document).ready(function () {
         });
     });
 
-    window.currentIndex = 0;
-
     function renderNewPair() {
         $('#main').find('.etsyItems').html('');
 
-        new leftItemView({model: newData[currentIndex][0]});
-        new rightItemView({model: newData[currentIndex][1]});
+        new LeftItemView({model: newData[currentIndex][0]});
+        new RightItemView({model: newData[currentIndex][1]});
 
         currentIndex++;
     }
 
     renderNewPair();
-    setInterval(renderNewPair, 5000);
+    // setInterval(renderNewPair, 6000);
 
 });
 
