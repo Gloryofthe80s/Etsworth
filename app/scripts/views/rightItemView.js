@@ -1,6 +1,6 @@
 var RightItemView = Backbone.View.extend({
-    tagName: 'a',
-    className: 'item-container c-right',
+    tagName: 'div',
+    className: 'item-container c-right scroll',
     attributes: {href : '#scrollToBottom'},
 
     createTemplate: _.template($('#item-template').text()),
@@ -35,7 +35,7 @@ var RightItemView = Backbone.View.extend({
 
         new ShowNextPairButtonView();
 
-        //reset smooth scroll for next pair
+        //reset smooth scrolling for new elements
         setSmoothScroll();
     },
 

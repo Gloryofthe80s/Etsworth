@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    window.setSmoothScroll = function() {
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'linear'
+        });
+    }
+
     window.playerScore = new PlayerScore();
     window.playerScoreView = new PlayerScoreView({model: playerScore});
 
@@ -1054,24 +1061,6 @@ $(document).ready(function () {
         new RightItemView({model: newData[currentIndex][1]});
 
         currentIndex++;
-    }
-
-    //smooth scroll to anchors
-    window.setSmoothScroll = function() {
-        $(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
     }
 
     renderFirstPair();

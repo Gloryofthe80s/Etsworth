@@ -7,7 +7,6 @@ var FlashCorrectView = Backbone.View.extend({
     },
 
     initialize: function() {
-        console.log('yo');
         $('#answer').append(this.el);
 
         this.render();

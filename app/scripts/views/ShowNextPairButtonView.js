@@ -1,6 +1,6 @@
 var ShowNextPairButtonView = Backbone.View.extend({
-    tagName: 'a',
-    className: 'show-next-pair-btn-container center-block',
+    tagName: 'div',
+    className: 'show-next-pair-btn-container center-block scroll',
     attributes: {href : '#scrollToTop'},
 
 
@@ -12,7 +12,10 @@ var ShowNextPairButtonView = Backbone.View.extend({
 
         currentIndex++;
 
-        //reset smooth scroll for next pair
+        //clean up any residual notifiers in the answer section
+        $('#answer').html('');
+
+        //reset smooth scrolling for new elements
         setSmoothScroll();
 
         this.remove();

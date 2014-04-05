@@ -18,7 +18,6 @@ var PlayerScoreView = Backbone.View.extend({
     },
 
     render: function() {
-        console.log('score rendered!')
         var renderedTemplate = this.createTemplate(this.model.attributes);
 
         var rendered = this.$el.html(renderedTemplate);

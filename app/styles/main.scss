@@ -148,6 +148,7 @@ footer {
         font-family: 'Open Sans', sans-serif;
         color: $light-gray;
         font-size: 16px;
+        z-index: 100;
 
         &:hover {
             color: $aqua;
