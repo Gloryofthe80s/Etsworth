@@ -1,0 +1,94 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Etsworth</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <!-- endFonts -->
+
+        <link rel="stylesheet" href="styles/79dc8425.main.css">
+
+        <script src="scripts/vendor/d7100892.modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="navbar-fixed-top">
+            <div class="container">
+                <h1>ETSWORTH | </h1>
+                <h3> a fun way to browse art on Etsy</h3>
+            </div>
+        </header>
+
+        <a id="scrollToTop"></a>
+        <div id="main">
+            <div class="container">
+
+                <div id="question">
+                    <h2 class="text-center">Which is more expensive?</h2>
+                </div>
+
+                <div id="current-score"></div>
+
+                <div class="etsyItems"></div>
+
+                <div id="answer"></div>
+
+                <div id="show-next-pair"></div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-contents">
+                    <a id="scrollToBottom"></a>
+                    <p>Etsworth was made by <a href="https://twitter.com/jjwielgus" target="_blank">this guy</a>.   </p>
+                    <p>Questions? <a href="mailto:etsworth@gmail.com?Subject=An%20inquiry,%20my%20good%20sir." target="_top">Email</a> me, if you're into that.</p>
+                    <p>&copy; 2014 All the rights. Reserved.</p>
+                    <p class="about">The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script type="text/template" id="item-template">
+                <img class="item-image" src= <%= url_570xN %> >
+        </script>
+
+        <script type="text/template" id="player-score-template">
+            <p class="player-score"> Your score: <span><%= correct %> / <%= total() %></span> </p>
+        </script>
+
+        <!-- smooth scroll -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script src="scripts/e94fec48.vendor.js"></script>
+
+        <script src="scripts/aaf74903.plugins.js"></script>
+
+        <script src="scripts/ca4a94b7.main.js"></script>
+</body>
+</html>
