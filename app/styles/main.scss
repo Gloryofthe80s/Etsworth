@@ -9,6 +9,7 @@ $gray : #919191;
 $light-gray : #E6E6E6;
 $lime : #B1D45E;
 $aqua : #68E3D7;
+$red : #DE624E;
 
 @mixin sexy-emboss($opacity:0.8, $opacity2:0.05) {
     box-shadow: 0 1px 0 rgba(255, 255, 255, $opacity),
@@ -82,6 +83,7 @@ footer {
 
     span {
         font-family: 'Open Sans', sans-serif;
+        font-size: 24px;
     }
 }
 
@@ -105,6 +107,10 @@ footer {
         font-family: 'Playfair Display', serif;
         font-size: 3em;
         margin-bottom: 25px;
+    }
+
+    .etsyItems {
+        margin-bottom: 20px;
     }
 
     .item-container {
@@ -153,6 +159,20 @@ footer {
     }
 }
 
+#answer {
+    min-height: 60px;
+}
+
+.incorrect,.correct {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 16px;
+    font-size: 26px;
+}
+
+.incorrect {
+    color: $red;
+}
+
 #show-next-pair {
     min-height: 120px;
 }
@@ -165,7 +185,6 @@ footer {
     text-align: center;
     vertical-align: middle;
     padding: 12px 6px;
-    margin-top: 16px;
 
     span {
         font-family: 'Open Sans', sans-serif;

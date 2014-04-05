@@ -15,18 +15,18 @@ $(document).ready(function () {
     })
 
     dispatcher.on('flashAnswerCorrect', function() {
-        console.log('correct!');
+        flashCorrect();
     });
     dispatcher.on('flashAnswerIncorrect', function() {
-        console.log('incorrect!');
+        flashIncorrect();
     });
 
     function flashCorrect() {
-
+        new FlashCorrectView();
     }
 
     function flashIncorrect() {
-
+        new FlashIncorrectView();
     }
 
     window.dummyData = [

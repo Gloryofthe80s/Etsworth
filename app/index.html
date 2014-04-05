@@ -49,8 +49,9 @@
 
                 <div class="etsyItems"></div>
 
-                <div id="show-next-pair">
-                </div>
+                <div id="answer"></div>
+
+                <div id="show-next-pair"></div>
 
             </div>
 
@@ -74,7 +75,7 @@
         </script>
 
         <script type="text/template" id="player-score-template">
-            <p class="player-score"> Current score: <span><%= correct %> / <%= total() %></span> </p>
+            <p class="player-score"> Your score: <span><%= correct %> / <%= total() %></span> </p>
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -114,6 +115,8 @@
         <script src="scripts/views/LeftItemView.js"></script>
         <script src="scripts/views/RightItemView.js"></script>
         <script src="scripts/views/PlayerScoreView.js"></script>
+        <script src="scripts/views/FlashCorrectView.js"></script>
+        <script src="scripts/views/FlashIncorrectView.js"></script>
         <script src="scripts/views/ShowNextPairButtonView.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
