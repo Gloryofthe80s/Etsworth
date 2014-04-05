@@ -6,7 +6,7 @@ var LeftItemView = Backbone.View.extend({
     createTemplate: _.template($('#item-template').text()),
 
     revealPrice: function() {
-        var rendered = this.$el.append("<p class='item-price'>$ " + this.model.attributes.price + "</p> <a class='item-url' target= '_blank' href=" + this.model.attributes.url + "> view on Etsy</p>");
+        var rendered = this.$el.append("<p class='item-price'>$ " + this.model.attributes.price + "</p> <a class='item-url' target= '_blank' href=" + this.model.attributes.url + "> VIEW ON ETSY</p>");
         rendered.hide().fadeIn('slow');
     },
 
