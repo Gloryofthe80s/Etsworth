@@ -149,10 +149,11 @@ footer {
 
     .item-url {
         font-family: 'Open Sans', sans-serif;
+        display: block;
         color: $light-gray;
         font-size: 16px;
         z-index: 100;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
 
         &:hover {
             color: $aqua;
